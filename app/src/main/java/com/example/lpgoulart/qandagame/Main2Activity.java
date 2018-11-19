@@ -86,6 +86,11 @@ public class Main2Activity extends Activity
         actionBar.setTitle(mTitle);
     }
 
+    public void about(MenuItem item) {
+        Intent about = new Intent(this, About.class);
+        startActivity(about);
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */

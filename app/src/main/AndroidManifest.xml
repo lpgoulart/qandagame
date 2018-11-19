@@ -20,7 +20,8 @@
         <activity android:name=".Login" />
         <activity
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"></activity>
+            android:label="@string/title_activity_main2" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>
