@@ -4,6 +4,7 @@
     <string name="title_activity_menu_status">MenuStatus</string>
     <string name="title_section1">Menu</string>
     <string name="title_section2">New Game</string>
+    <string name="title_section4">Setting</string>
     <string name="title_section3">Log out</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

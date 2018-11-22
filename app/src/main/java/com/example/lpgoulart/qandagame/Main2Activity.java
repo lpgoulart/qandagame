@@ -38,8 +38,6 @@ public class Main2Activity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
-
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -63,7 +61,6 @@ public class Main2Activity extends Activity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
-
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
@@ -71,6 +68,12 @@ public class Main2Activity extends Activity
                 startActivity(homeIntent);
                 break;
             case 3:
+                mTitle = getString(R.string.title_section4);
+                Intent setting = new Intent(this, SettingsUser.class);
+                startActivity(setting);
+                finish();
+                break;
+            case 4:
                 mTitle = getString(R.string.title_section3);
                 Intent logout = new Intent(this, Login.class);
                 startActivity(logout);
