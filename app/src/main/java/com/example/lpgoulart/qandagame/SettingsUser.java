@@ -26,7 +26,7 @@ public class SettingsUser extends Activity {
                             .setTicker("Title")
                             .setContentTitle("Voce alterou o nome")
                             .setContentText("o nome foi alterado com sucesso")
-                            .setSmallIcon(R.drawable.ic_drawer)
+                            .setSmallIcon(R.drawable.ic_action_done)
                             .setContentIntent(pendingIntent).getNotification();
 
                     notification.flags = Notification.FLAG_AUTO_CANCEL;
@@ -46,7 +46,7 @@ public class SettingsUser extends Activity {
                 .setTicker("Title")
                 .setContentTitle("Voce alterou a senha")
                 .setContentText("a senha foi alterada com sucesso")
-                .setSmallIcon(R.drawable.ic_drawer)
+                .setSmallIcon(R.drawable.ic_action_done_all)
                 .setContentIntent(pendingIntent).getNotification();
 
         notification.flags = Notification.FLAG_AUTO_CANCEL;
@@ -63,7 +63,7 @@ public class SettingsUser extends Activity {
                 .setTicker("Title")
                 .setContentTitle("Voce alterou o nome e a senha")
                 .setContentText("Dados alterados com sucesso")
-                .setSmallIcon(R.drawable.ic_drawer)
+                .setSmallIcon(R.drawable.ic_action_how_to_reg)
                 .setContentIntent(pendingIntent).getNotification();
 
         notification.flags = Notification.FLAG_AUTO_CANCEL;
