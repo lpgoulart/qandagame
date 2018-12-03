@@ -20,8 +20,12 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Main2Activity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    private FirebaseAuth mAuth;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -37,6 +41,8 @@ public class Main2Activity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        mAuth = FirebaseAuth.getInstance();
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -75,6 +81,7 @@ public class Main2Activity extends Activity
                 break;
             case 4:
                 mTitle = getString(R.string.title_section3);
+                mAuth.signOut();
                 Intent logout = new Intent(this, Login.class);
                 startActivity(logout);
                 finish();

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1096509722166",
+    "firebase_url": "https://meusitelogin.firebaseio.com",
+    "project_id": "meusitelogin",
+    "storage_bucket": "meusitelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096509722166:android:7fdba3f50dd384fc",
+        "android_client_info": {
+          "package_name": "com.example.lpgoulart.qandagame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096509722166-gotq7adi6dg9k0j442aq68sou4l3uceh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lpgoulart.qandagame",
+            "certificate_hash": "9f0a3b02c989acdb53f2bf618dc077ff9bf1c5fa"
+          }
+        },
+        {
+          "client_id": "1096509722166-h448ongq4gef686nqsf2cp4dic3tdeb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3qSGE7vrzPAHH83clo2HL8IpkPmdAIWI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096509722166-h448ongq4gef686nqsf2cp4dic3tdeb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
