@@ -86,6 +86,8 @@ public class Login extends Activity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
                                     Toast.makeText(Login.this, "Usuário cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(Login.this,Main2Activity.class));
+                                    finish();
                                 }else{
                                     String resposta = task.getException().toString();
                                     Toast.makeText(Login.this, "Erro ao cadastrar Usuário!", Toast.LENGTH_SHORT).show();
