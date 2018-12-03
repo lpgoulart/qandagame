@@ -9,8 +9,8 @@
     android:padding="30dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="372dp"
         android:layout_centerVertical="true">
 
         <TextView
@@ -25,52 +25,30 @@
             android:textAlignment="center"
             android:textSize="35dp" />
 
-        <EditText
-            android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/game_title_login"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="28dp"
-            android:hint="user"
-            android:inputType="text" />
 
         <Button
             android:id="@+id/btnName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/userName"
+            android:layout_below="@id/game_title_login"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="104dp"
             android:onClick="changeName"
             android:text="Change Username" />
 
-        <EditText
-            android:id="@+id/newPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnName"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="23dp"
-            android:hint="password"
-            android:inputType="numberPassword" />
 
         <Button
             android:id="@+id/nameandpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/newPassword"
+            android:layout_below="@id/btnName"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="19dp"
             android:onClick="changePassword"
             android:text="Change Password" />
 
-        <Button
-            android:id="@+id/changeAll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/nameandpass"
-            android:onClick="changeAll"
-            android:text="Change Name and Password" />
     </RelativeLayout>
 
     <Button
