@@ -22,7 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
-import org.w3c.dom.Text;
 
 public class SettingsUser extends Activity{
 

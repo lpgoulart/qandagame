@@ -53,7 +53,6 @@ public class SplashActivity extends Activity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 startActivity(homePageIntent);
-                //SplashActivity.this.overridePendingTransition(R.anim.abc_popup_enter, R.anim.abc_popup_exit);
                 finish();
             }
 
