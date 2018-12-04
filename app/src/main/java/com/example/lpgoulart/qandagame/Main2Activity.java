@@ -1,5 +1,6 @@
 package com.example.lpgoulart.qandagame;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import android.app.ActionBar;
@@ -24,11 +25,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 public class Main2Activity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
-    private FirebaseAuth mAuth;
+    public FirebaseAuth mAuth;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -39,6 +42,7 @@ public class Main2Activity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,8 @@ public class Main2Activity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+
     }
 
     @Override
@@ -113,9 +119,11 @@ public class Main2Activity extends Activity
          * The fragment argument representing the section number for this
          * fragment.
          */
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
+
         }
 
         /**

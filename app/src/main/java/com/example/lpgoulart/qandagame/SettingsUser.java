@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.widget.DrawerLayout;
@@ -19,8 +20,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
-public class SettingsUser extends Activity {
+import org.w3c.dom.Text;
+
+public class SettingsUser extends Activity{
 
     FirebaseAuth auth;
 
@@ -30,6 +34,11 @@ public class SettingsUser extends Activity {
         setContentView(R.layout.activity_settings_user);
 
         auth = FirebaseAuth.getInstance();
+
+        TextView useremail = (TextView) findViewById(R.id.emailUser);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        useremail.setText(user.getEmail());
+
     }
 
     // esse metodo muda o nome do usuario
@@ -44,7 +53,6 @@ public class SettingsUser extends Activity {
             usernameDialog.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
                     Intent intent = new Intent();
                     PendingIntent pendingIntent = PendingIntent.getActivity(SettingsUser.this, 0, intent, 0);
                     Notification notification = new Notification.Builder(SettingsUser.this)
@@ -57,11 +65,9 @@ public class SettingsUser extends Activity {
                     notification.flags = Notification.FLAG_AUTO_CANCEL;
                     NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                     nm.notify(0,notification);
-
                 }
             });
             usernameDialog.show();
-
 
 //        Toast.makeText(this, "Username updated (Notificação)", Toast.LENGTH_SHORT).show();
     }
@@ -108,4 +114,5 @@ public class SettingsUser extends Activity {
         startActivity(homepage);
         finish();
     }
+
 }

@@ -21,18 +21,17 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="141dp"
-        android:text="User: Admin"
-        android:textSize="30sp" />
+        android:text="Hope you have a great time here"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/games"
         android:layout_width="171dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/username"
-
         android:layout_alignParentTop="true"
         android:layout_marginTop="253dp"
-        android:text="Total: 20"
+        android:text="Total de jogos: 20"
         android:textSize="20sp" />
 
     <TextView
@@ -43,7 +42,7 @@
         android:layout_alignStart="@+id/username"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="20dp"
-        android:text="Total: 10"
+        android:text="Acertos: 10"
         android:textSize="20sp" />
 
     <TextView
@@ -54,7 +53,7 @@
         android:layout_alignStart="@+id/username"
         android:layout_marginStart="1dp"
         android:layout_marginTop="19dp"
-        android:text="Total: 10"
+        android:text="Erros: 10"
         android:textSize="20sp" />
 
 </RelativeLayout>
