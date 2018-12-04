@@ -17,19 +17,26 @@ import android.support.v4.widget.DrawerLayout;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SettingsUser extends Activity {
+
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_user);
+
+        auth = FirebaseAuth.getInstance();
     }
 
     // esse metodo muda o nome do usuario
     public void changeName(View view) {
 
             final AlertDialog.Builder usernameDialog = new AlertDialog.Builder(this);
+
 
             usernameDialog.setTitle("Username");
             usernameDialog.setView(R.layout.fragment_new_name);
@@ -61,15 +68,17 @@ public class SettingsUser extends Activity {
 
     // esse metodo muda a senha do usuario
     public void changePassword(View view) {
-
+            final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             final AlertDialog.Builder passwordDialog = new AlertDialog.Builder(this);
 
-            passwordDialog.setTitle("Password");
-            passwordDialog.setView(R.layout.fragment_pass_confirmation);
+
+        passwordDialog.setTitle("Password");
+        passwordDialog.setView(R.layout.fragment_pass_confirmation);
 
             passwordDialog.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+//                    final String password = ((TextView)findViewById(R.id.pass_frag_input)).getText().toString();
 
                     Intent intent = new Intent();
                     PendingIntent pendingIntent = PendingIntent.getActivity(SettingsUser.this, 0, intent, 0);
@@ -83,10 +92,9 @@ public class SettingsUser extends Activity {
                     notification.flags = Notification.FLAG_AUTO_CANCEL;
                     NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                     nm.notify(0,notification);
-
                 }
             });
-            passwordDialog.show();
+        passwordDialog.show();
 
 
 

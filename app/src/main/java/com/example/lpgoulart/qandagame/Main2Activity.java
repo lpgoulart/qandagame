@@ -75,6 +75,7 @@ public class Main2Activity extends Activity
                 mTitle = getString(R.string.title_section2);
                 Intent homeIntent = new Intent(this, MainActivity.class);
                 startActivity(homeIntent);
+                finish();
                 break;
             case 3:
                 mTitle = getString(R.string.title_section4);
