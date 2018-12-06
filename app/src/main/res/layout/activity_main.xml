@@ -11,9 +11,9 @@
             android:layout_width="match_parent"
             android:layout_height="295dp"
             android:gravity="center"
-            android:text="The game will happen here!"
+            android:text="Qual das opções abaixo tem dois zeros dois quatro?\na. 0044\nb.0024\nc. 2024\nd. NDA"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,13 +31,14 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
+                android:onClick="letraA"
                 android:text="A" />
 
             <Button
                 android:id="@+id/btn_c"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-
+                android:onClick="letraC"
                 android:text="C" />
 
         </LinearLayout>
@@ -53,12 +54,14 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="B"
+                android:onClick="letraB"
                 android:layout_marginBottom="15dp"/>
 
             <Button
                 android:id="@+id/btn_d"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:onClick="letraD"
                 android:text="D" />
 
         </LinearLayout>
